@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col md-6 offset-3">
     <h1>
-      <%= @user.username %>
+      posts by people you follow
     </h1>
 
     <ul class="nav nav-pills nav-justified">
@@ -24,6 +24,6 @@
   </div>
 </div>
 
-<% current_user.liked_photos.each do |photo|%>
+<% current_user.feed.each do |photo|%>
   <%= render "photos/foto", photo: photo  %>
 <% end %>

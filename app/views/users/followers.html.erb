@@ -24,6 +24,8 @@
   </div>
 </div>
 
-<% current_user.liked_photos.each do |photo|%>
-  <%= render "photos/foto", photo: photo  %>
+<% current_user.accepted_received_follow_requests.each do |follower|%>
+  <div class="list-group">
+  <%= link_to "#{follower.sender.username}"%>
+  </div>
 <% end %>
