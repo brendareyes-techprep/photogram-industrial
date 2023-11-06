@@ -24,6 +24,8 @@
   </div>
 </div>
 
-<% current_user.own_photos.each do |photo|%>
-  <%= render "photos/foto", photo: photo %>
+<% current_user.leaders.each do |leader|%>
+  <div class="list-group">
+  <%= link_to "#{leader.username}"%>
+  </div>
 <% end %>

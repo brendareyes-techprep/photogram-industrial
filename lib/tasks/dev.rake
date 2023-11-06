@@ -13,6 +13,10 @@ task({ :sample_data => :environment }) do
 
     usernames << "alice"
     usernames << "bob"
+    usernames << "jun"
+    usernames << "carman"
+    usernames << "brenda"
+    usernames << "andre"
 
     usernames.each do |username|
       User.create(
